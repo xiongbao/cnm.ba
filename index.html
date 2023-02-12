@@ -20,7 +20,11 @@
     html,body {
       margin: 0;
     }
+    html {
+      font-size: 13.3333vw;
+    }
     body {
+      font-size: 16px;
       padding: 40px 20px 0;
       background-color: #f1f1fa;
       font-family: sans-serif;
@@ -61,7 +65,7 @@
     }
     h1 {
       margin: 0 0 0 20px;
-      font-size: 96px;
+      font-size: .96rem;
       font-family: 'cnm';
       font-weight: normal;
       background-repeat: no-repeat;
@@ -70,7 +74,7 @@
       color: #fff;
     }
     video {
-      height: 200px;
+      height: 2rem;
       margin-left: auto;
     }
     button {
@@ -108,7 +112,7 @@
     }
     h3 {
       margin: 0;
-      font-size: 36px;
+      font-size: .48rem;
       font-weight: 500;
     }
     section p {margin-left: auto;}
@@ -155,7 +159,7 @@
       border: 3px solid #000;
       border-top-color: #999;
       border-left-color: #999;
-      font-size: 48px;
+      font-size: .48rem;
       font-weight: 500;
       font-family: monospace;
       margin: 12px 0 0;
@@ -171,15 +175,10 @@
       padding: 20px 0 40px;
       color: #a8a8aa;
     }
-    @media screen and (orientation: portrait) and (max-width: 720px) {
+    @media screen and (orientation: portrait) and (max-width: 750px) {
       body {
         padding-top: 0;
-      }
-      h1 {
-        font-size: 48px;
-      }
-      video {
-        height: 120px;
+        font-size: .3rem;
       }
       ul a {
         flex-direction: column;
@@ -187,8 +186,10 @@
       ul p {
         margin: 0;
       }
-      section + section a {
-        font-size: 28px;
+    }
+    @media screen and (min-width: 750px) {
+      html {
+        font-size: 100px;
       }
     }
     @media (prefers-color-scheme: dark) {
@@ -219,7 +220,7 @@
     </div>
     <div>
       <h1><span>操你妈</span></h1>
-      <video muted="" loop="loop" autoplay="autoplay" webkit-playsinline="true" playsinline="true" src="assets/images/cnm.webm"></video>
+      <video muted="" loop="loop" autoplay="autoplay" x5-video-player-type="h5" webkit-playsinline="true" playsinline="true" poster="assets/images/cover.png" src="assets/images/cnm.webm"></video>
       <button>播放声音</button>
     </div>
   </header>
@@ -240,6 +241,10 @@
       <li><a href="https://yaojiewen.com" target="_blank">
         <h3>姚杰文</h3>
         <p>姚杰文是一条疯狗，一条高文凭的疯狗</p>
+      </a></li>
+      <li><a href="http://zxgk.court.gov.cn/shixin/" target="_blank">
+        <h3>查老赖</h3>
+        <p>失信被执行人名单信息公布与查询</p>
       </a></li>
       <li><a href="http://xn--qes1f.xn--55qx5d/" target="_blank">
         <h3>垃圾公司</h3>
@@ -321,24 +326,33 @@
         cnm.play()
       }
     }
-  //判断是否是Android端打开链接
-  if (navigator.userAgent.indexOf("Android") > 0) {
-     //如果是Android的话，在判断是否是微信端打开链接
-    function isWeChat(){  
-      var ua = navigator.userAgent.toLowerCase();  
-      if(ua.match(/MicroMessenger/i)=="micromessenger") {  
-        return true;
-      } else {  
-        return false;
+    //判断是否是Android端打开链接
+    if (navigator.userAgent.indexOf("Android") > 0) {
+      //如果是Android的话，在判断是否是微信端打开链接
+      function isWeChat(){  
+        var ua = navigator.userAgent.toLowerCase();  
+        if(ua.match(/MicroMessenger/i)=="micromessenger") {  
+          return true;
+        } else {  
+          return false;
+        }  
       }  
-    }  
-    //如果是在Android端微信打开 触摸播放
-    if( isWeChat() ) {
-      document.addEventListener('touchstart', function() {
-        cnm.play()
-      })
+      //如果是在Android端微信打开 触摸播放
+      if( isWeChat() ) {
+        document.addEventListener('touchstart', function() {
+          cnm.play()
+        })
+      }
     }
-  }
+  </script>
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?15d8b1a53514a8a458e8d36c40ad1e14";
+      var s = document.getElementsByTagName("script")[0]; 
+      s.parentNode.insertBefore(hm, s);
+    })();
   </script>
 </body>
 </html>
