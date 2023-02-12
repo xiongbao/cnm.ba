@@ -321,6 +321,24 @@
         cnm.play()
       }
     }
+  //判断是否是Android端打开链接
+  if (navigator.userAgent.indexOf("Android") > 0) {
+     //如果是Android的话，在判断是否是微信端打开链接
+    function isWeChat(){  
+      var ua = navigator.userAgent.toLowerCase();  
+      if(ua.match(/MicroMessenger/i)=="micromessenger") {  
+        return true;
+      } else {  
+        return false;
+      }  
+    }  
+    //如果是在Android端微信打开 触摸播放
+    if( isWeChat() ) {
+      document.addEventListener('touchstart', function() {
+        cnm.play()
+      })
+    }
+  }
   </script>
 </body>
 </html>
