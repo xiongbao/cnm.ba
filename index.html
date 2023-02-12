@@ -1,0 +1,312 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta content="操你妈逼啊，这是一个充满爱意的导航网站。" name="description">
+  <meta content="操你妈,操你妈逼,日你妈,干你娘,傻逼,疯狗" name="keywords">
+  <meta name="theme-color" content="#252628">
+  <link rel="icon" type="image/png" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🫰</text></svg>">
+  <link rel="icon" type="image/png" sizes="144x144" href="assets/images/cnm.icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="assets/images/cnm.icon.png">
+  <title>操你妈</title>
+  <style>
+    @font-face {
+      font-family: 'cnm';
+      src: url('./assets/fonts/CaoNiMa-Regular.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+    html,body {
+      margin: 0;
+    }
+    body {
+      padding: 40px 20px 0;
+      background-color: #f1f1fa;
+      font-family: sans-serif;
+    }
+    p {color: #878b99;font-weight: 300;}
+    a,a:visited {
+      color: inherit;
+      text-decoration: none;
+    }
+    header {
+      max-width: 750px;
+      margin: 0 auto;
+    }
+    header div {
+      display: flex;
+      align-items: center;
+    }
+    header div:first-child {
+      padding: 0 20px;
+    }
+    nav {
+      margin-left: auto;
+      display: flex;
+    }
+    nav a {
+      margin-left: 20px;
+    }
+    nav a:hover {
+      color: #2950de;
+    }
+    header div:last-child {
+      position: relative;
+      border-radius: 8px;
+      background-color: #000;
+      background-image: url();
+      background-size: cover;
+      background-position: 50% 50%;
+    }
+    h1 {
+      margin: 0 0 0 20px;
+      font-size: 96px;
+      font-family: 'cnm';
+      font-weight: normal;
+      background-repeat: no-repeat;
+      background-size: auto 100%;
+      background-position: 50% 50%;
+      color: #fff;
+    }
+    video {
+      height: 200px;
+      margin-left: auto;
+    }
+    button {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      margin: 0;
+      padding: 0;
+      width: 44px;
+      height: 44px;
+      overflow: hidden;
+      cursor: pointer;
+      border: 0 none;
+      color: transparent;
+      background-color: transparent;
+      background-size: 16px;
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      background-image: url(./assets/images/off.svg);
+    }
+    button.on {
+      background-image: url(./assets/images/on.svg);
+    }
+    section {
+      max-width: 750px;
+      margin: 20px auto 0;
+    }
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-gap: 20px;
+    }
+    h3 {
+      margin: 0;
+      font-size: 36px;
+      font-weight: 500;
+    }
+    section p {margin-left: auto;}
+    ul a {
+      display: flex;
+      align-items: center;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+    }
+    ul a:hover {
+      background-color: #fafafe;
+    }
+
+    section + section {
+      position: fixed;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin: 0;
+      padding: 0 20px;
+      max-width: none;
+      background-color: rgba(0,0,0,.6);
+      display: none;
+      align-items: center;
+      justify-content: center;
+    }
+
+    section + section.show {
+      display: flex;
+    }
+
+    section + section div {
+      background-color: #fff;
+      padding: 10px 20px;
+      max-width: 750px;
+      border-radius: 8px;
+    }
+    section + section a {
+      display: block;
+      text-align: center;
+      padding: 10px 0;
+      border: 3px solid #000;
+      border-top-color: #999;
+      border-left-color: #999;
+      font-size: 48px;
+      font-weight: 500;
+      font-family: monospace;
+      margin: 12px 0 0;
+      color: #000;
+    }
+    section + section a:hover {
+      border-color: #9baae2 #2950de #2950de #9baae2;
+      color: #2950de;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px 0 40px;
+      color: #a8a8aa;
+    }
+    @media screen and (orientation: portrait) and (max-width: 720px) {
+      body {
+        padding-top: 0;
+      }
+      h1 {
+        font-size: 48px;
+      }
+      video {
+        height: 120px;
+      }
+      ul a {
+        flex-direction: column;
+      }
+      ul p {
+        margin: 0;
+      }
+      section + section a {
+        font-size: 28px;
+      }
+    }
+    @media (prefers-color-scheme: dark) {
+      body {
+        background-color: #191919;
+      }
+      h3 {color: #d3d3d3;}
+      section a {
+        background-color: #232323;
+      }
+      section a:hover {
+        background-color: #38383a
+      }
+      footer {
+        color: #38383a;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div>
+      <p>一个充满爱意的导航</p>
+      <nav>
+        <a href="javascript:showAbout();">关于</a>
+        <a href="https://docs.qq.com/form/page/DQ3JMU0pQR1pQR1BU" target="_blank">添油加醋</a>
+      </nav>
+    </div>
+    <div>
+      <h1><span>操你妈</span></h1>
+      <video muted="" loop="loop" autoplay="autoplay" webkit-playsinline="true" playsinline="true" src="assets/images/cnm1.webm"></video>
+      <button>播放声音</button>
+    </div>
+  </header>
+  <section>
+    <ul>
+      <li><a href="https://is.sb" target="_blank">
+        <h3>傻逼网</h3>
+        <p>专业的傻逼鉴定平台。</p>
+      </a></li>
+      <li><a href="https://anti.christmas" target="_blank">
+        <h3>抵制洋节</h3>
+        <p>抵制洋节，支持中国传统文化。</p>
+      </a></li>
+      <li><a href="https://anti.hm" target="_blank">
+        <h3>抵制H&M</h3>
+        <p>抵制H&M与BCI组织无良品牌，支持新疆棉</p>
+      </a></li>
+      <li><a href="https://yaojiewen.com" target="_blank">
+        <h3>疯狗姚杰文</h3>
+        <p>姚杰文是一条疯狗，一条高文凭的疯狗</p>
+      </a></li>
+      <li><a href="https://fuckunitedstates.com/" target="_blank">
+        <h3>干美国</h3>
+        <p>美帝国主义亡我之心不死</p>
+      </a></li>
+      <li><a href="https://www.fuckpotus.com/" target="_blank">
+        <h3>干美国总统</h3>
+        <p>100件充满爱的事记录我们的相恋历程</p>
+      </a></li>
+    </ul>
+  </section>
+  <section>
+    <div>
+      <h2>关于</h2>
+      <p>这是一个充满爱意的网址导航，由一位心地善良的爱国人士创办。<br>旨在弘扬社会主义核心价值观。</p>
+      <p>所有的网址均来自网友投稿，本站只负责收集展示；<br>对其内容不负任何责任。</p>
+      <p>如果您有任何疑问或建议可以联系(最好没有)：<a href="mailto:ni@zhao.si">ni@zhao.si</a></p>
+    </div>
+  </section>
+  <footer>&copy; 2023 CNM.BA</footer>
+  <script>
+    //判断样式是否存在
+    function hasClass(ele, cls) {
+      return ele.className.match(new RegExp("(\\s|^)" + cls + "(\\s|$)"));
+    }
+    //为指定的dom元素添加样式
+    function addClass(ele, cls) {
+      if (!this.hasClass(ele, cls)) ele.className += " " + cls;
+    }
+    //删除指定dom元素的样式
+    function removeClass(ele, cls) {
+      if (hasClass(ele, cls)) {
+        var reg = new RegExp("(\\s|^)" + cls + "(\\s|$)");
+        ele.className = ele.className.replace(reg, " ");
+      }
+    }
+    //如果存在(不存在)，就删除(添加)一个样式
+    function toggleClass(ele,cls){ 
+      if(hasClass(ele,cls)){ 
+        removeClass(ele, cls); 
+      }else{ 
+        addClass(ele, cls); 
+      } 
+    }
+    var isMuted = true;
+    var cnm = document.getElementsByTagName('video')[0];
+    var btn = document.getElementsByTagName('button')[0];
+    cnm.addEventListener('ended',function(){
+      alert("视频播放完毕，可以继续后面的动作！");
+    });
+    btn.onclick = function(){
+      if(isMuted) {
+        cnm.muted = false;
+        isMuted = false;
+      } else {
+        cnm.muted = true;
+        isMuted = true;
+      }
+      toggleClass(btn,"on"); 
+    }
+    var eleAbout = document.getElementsByTagName('section')[1];
+    function showAbout() {
+      toggleClass(eleAbout,"show")
+    }
+    eleAbout.onclick = function(){
+      toggleClass(eleAbout,"show"); 
+    }
+  </script>
+</body>
+</html>
